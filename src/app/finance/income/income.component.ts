@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { IncomeserviceService } from '../../incomeservice.service';
+import { Subscribable } from 'rxjs';
+import { Subscriber } from 'rxjs';
 
-@Component({
+ @Component({
   selector: 'app-income',
   standalone: false,
   
@@ -8,5 +11,17 @@ import { Component } from '@angular/core';
   styleUrl: './income.component.css'
 })
 export class IncomeComponent {
+  constructor( private service : IncomeserviceService){
+
+  }
+
+  getdata(){
+    console.log("working!!!!!!!!!!!");
+    
+        this.service.getting().subscribe((data)=>{
+          console.log(data);
+        })
+  }
+ 
 
 }

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { IncomeComponent } from './income/income.component';
 import { ExpenseComponent } from './expense/expense.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -13,7 +15,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class FinanceModule { }

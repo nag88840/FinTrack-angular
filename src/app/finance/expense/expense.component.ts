@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LogindataService } from '../../service_files/logindata.service';
 
 @Component({
   selector: 'app-expense',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './expense.component.css'
 })
 export class ExpenseComponent {
+constructor(private service :LogindataService){}
+  // users(){
+  //   this.service.getting().subscribe((data)=>{
+  //     console.log(data);
+  //   })
+
+  // }
 
 }

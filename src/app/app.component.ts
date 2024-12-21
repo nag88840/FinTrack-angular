@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fin-angular';
+
+  
+
+
+  navbar=true;
+ 
 }
