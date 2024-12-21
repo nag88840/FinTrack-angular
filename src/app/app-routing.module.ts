@@ -13,7 +13,8 @@ const routes: Routes = [
   {path:"income",component:IncomeComponent},
   {path:"expense",component:ExpenseComponent},
   {path:"register",component:SignupComponent},
-  {path:"login",component:LoginComponent}
+  {path:"login",component:LoginComponent},
+  {path:"signout",component:SignupComponent}
 
 ];
 

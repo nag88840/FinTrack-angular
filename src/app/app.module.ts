@@ -8,7 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { AuthModule } from './auth/auth.module';
+import { FinanceModule } from './finance/finance.module';
+import { provideHttpClient } from '@angular/common/http';
+ 
 
 @NgModule({
   declarations: [
@@ -16,15 +19,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     NavbarComponent
   ],
   imports: [
+    FinanceModule,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    AuthModule,
+ 
+     
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
